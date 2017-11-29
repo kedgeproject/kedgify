@@ -1,15 +1,12 @@
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
-  creationTimestamp: null
   labels:
     app: httpd
   name: httpd
 spec:
-  strategy: {}
   template:
     metadata:
-      creationTimestamp: null
       labels:
         app: httpd
       name: httpd
@@ -17,5 +14,3 @@ spec:
       containers:
       - image: centos/httpd
         name: httpd
-        resources: {}
-status: {}
