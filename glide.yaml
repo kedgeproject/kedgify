@@ -1,0 +1,20 @@
+package: github.com/kedgeproject/kedge
+import:
+
+- package: github.com/ghodss/yaml
+  version: 73d445a93680fa1a78ae23a5839bad48f32ba1ee
+
+- package: github.com/spf13/cobra
+  version: 7c674d9e72017ed25f6d2b5e497a1368086b6a6f
+
+- package: github.com/spf13/pflag
+  version: 9ff6c6923cfffbcd502984b8e0c80539a94968b7
+
+- package: github.com/spf13/viper
+  version: 7fb2782df3d83e0036cc89f461ed0422628776f4
+
+- package: github.com/pkg/errors
+  version: v0.8.0
+
+- package: github.com/Sirupsen/logrus
+  version: v0.7.3
