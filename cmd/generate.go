@@ -18,6 +18,7 @@ import (
 	"fmt"
 	"os"
 
+	"github.com/containscafeine/kedgify/pkg/core"
 	"github.com/spf13/cobra"
 )
 
@@ -27,6 +28,10 @@ var generateCmd = &cobra.Command{
 	Short: "Generate Kubernetes resources from an app definition",
 	Run: func(cmd *cobra.Command, args []string) {
 		if err := ifFilesPassed(InputFiles); err != nil {
+			fmt.Println(err)
+			os.Exit(-1)
+		}
+		if err := core.GenerateKedge(InputFiles); err != nil {
 			fmt.Println(err)
 			os.Exit(-1)
 		}
