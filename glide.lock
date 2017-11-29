@@ -1,10 +1,18 @@
-hash: b5ef235b078d3a2a75f249004f2f3ab11da638dd8e7a5453e55b1f2611ed02c7
-updated: 2017-11-28T19:45:00.576748846+05:30
+hash: bdb3f062b330b2c27d5d5ee5e10a25d64196b0a1daa56f4fd6c98126b7e9d375
+updated: 2017-11-29T17:18:34.890094218+05:30
 imports:
+- name: github.com/davecgh/go-spew
+  version: 5215b55f46b2b919f50a1df0eaa5886afe4e3b3d
+  subpackages:
+  - spew
 - name: github.com/ghodss/yaml
   version: 73d445a93680fa1a78ae23a5839bad48f32ba1ee
 - name: github.com/inconshreveable/mousetrap
   version: 76626ae9c91c4f2a10f34cad8ce83ea42c93bb75
+- name: github.com/kedgeproject/kedge
+  version: 99e40dd2445f4602fe06ff3cc97e6b8ead6f8c34
+  subpackages:
+  - pkg/spec
 - name: github.com/pkg/errors
   version: 645ef00459ed84a119197bfb8d8205042c6df63d
 - name: github.com/Sirupsen/logrus
@@ -15,4 +23,6 @@ imports:
   version: 9ff6c6923cfffbcd502984b8e0c80539a94968b7
 - name: github.com/spf13/viper
   version: 7fb2782df3d83e0036cc89f461ed0422628776f4
+- name: gopkg.in/yaml.v2
+  version: 287cf08546ab5e7e37d55a84f7ed3fd1db036de5
 testImports: []

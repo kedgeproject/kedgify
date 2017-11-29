@@ -1,0 +1,51 @@
+package: github.com/kedgeproject/kedge
+import:
+
+- package: github.com/ghodss/yaml
+  version: 73d445a93680fa1a78ae23a5839bad48f32ba1ee
+
+- package: github.com/spf13/cobra
+  version: 7c674d9e72017ed25f6d2b5e497a1368086b6a6f
+
+- package: github.com/spf13/pflag
+  version: 9ff6c6923cfffbcd502984b8e0c80539a94968b7
+
+- package: github.com/spf13/viper
+  version: 7fb2782df3d83e0036cc89f461ed0422628776f4
+
+- package: github.com/pkg/errors
+  version: v0.7.0
+
+- package: github.com/davecgh/go-spew
+  version: 5215b55f46b2b919f50a1df0eaa5886afe4e3b3d
+
+- package: github.com/Sirupsen/logrus
+  version: v0.7.3
+
+- package: github.com/fsouza/go-dockerclient
+  version: 3f9370a4738ba8d0ed6eea63582ca6db5eb48032
+
+- package: github.com/novln/docker-parser
+  version: 6030251119d652af8ead44ac7907444227b64d56
+
+# pinning 'golang.org/x/sys' otherwise docker dependencies complain to compiling
+- package: golang.org/x/sys
+  version: 8d1157a435470616f975ff9bb013bea8d0962067
+  subpackages:
+  - unix
+  
+
+# Those are packages that OpenShift patches in its vendor directory.
+# Those patched libs are not published elsewhere.
+# See https://github.com/openshift/origin/pull/15797 for more info.
+# We have to ignore them here so they are not downloaded by glide.
+# We have to use modified version of those packages from github.com/openshift/origin/vendor,
+# otherwise OpenShift won't build.
+# OpenShift vendoring with all its dependencies is handled by ./scripts/openshift-vendor.sh
+ignore:
+  - github.com/openshift/origin
+  - k8s.io/kubernetes
+  - k8s.io/apimachinery
+  - k8s.io/client-go
+  - k8s.io/apiserver
+  - k8s.io/kube-aggregator

@@ -1,4 +1,4 @@
-package: github.com/kedgeproject/kedge
+package: github.com/containscafeine/kedgify
 import:
 
 - package: github.com/ghodss/yaml
@@ -18,3 +18,21 @@ import:
 
 - package: github.com/Sirupsen/logrus
   version: v0.7.3
+
+- package: github.com/kedgeproject/kedge
+
+# Those are packages that OpenShift patches in its vendor directory.
+# Those patched libs are not published elsewhere.
+# See https://github.com/openshift/origin/pull/15797 for more info.
+# We have to ignore them here so they are not downloaded by glide.
+# We have to use modified version of those packages from github.com/openshift/origin/vendor,
+# otherwise OpenShift won't build.
+# OpenShift vendoring with all its dependencies is handled by ./scripts/openshift-vendor.sh
+ignore:
+  - github.com/openshift/origin
+  - k8s.io/kubernetes
+  - k8s.io/apimachinery
+  - k8s.io/client-go
+  - k8s.io/apiserver
+  - k8s.io/kube-aggregator
+
