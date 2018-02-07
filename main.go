@@ -16,7 +16,7 @@ limitations under the License.
 
 package main
 
-import "github.com/containscafeine/kedgify/cmd"
+import "github.com/kedgeproject/kedgify/cmd"
 
 func main() {
 	cmd.Execute()
