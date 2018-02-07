@@ -18,7 +18,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/containscafeine/kedgify/pkg/core"
+	"github.com/kedgeproject/kedgify/pkg/core"
 	"github.com/spf13/cobra"
 )
 
